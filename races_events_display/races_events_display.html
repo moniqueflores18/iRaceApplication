@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Events</title>
+	<link rel="stylesheet" type="text/css" href="races_events_display.css"/>
+	<link rel="stylesheet"  href="../css/jquery.mobile-1.2.0.css" />
+	<script src="../js/jquery.js"></script>
+	<script src="../js/cordova.js"></script>
+	<script src="../js/jquery.mobile-1.2.0.js"></script>
+	<script src="races_events_display.js"></script>
+	<style>
+	   .modal {
+            display:    none;
+            position:   fixed;
+            z-index:    1000;
+            top:        0;
+            left:       0;
+            height:     100%;
+            width:      100%;
+            background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+        }
+        /* When the body has the loading class, we turn
+        the scrollbar off with overflow:hidden */
+        body.loading {
+            overflow: hidden;   
+        }
+
+        /* Anytime the body has the loading class, our
+        modal element will be visible */
+        body.loading .modal {
+            display: block;
+        }
+	</style>
+</head>
+
+<body>
+	<div data-role="header" class="header-docs ui-state-persist" data-theme="a" data-position="fixed" data-tap-toggle="false">
+	
+		<div data-role="navbar">
+		<ul>
+			<li><a rel="external" href="about2.html">iRace.ph</a></li>
+			
+			<li><a rel="external" class="ui-btn-active ui-state-persist" href="events.html">Events</a></li>
+			
+			<li><a rel="external" href="races.html">Races</a></li>
+			<li><a rel="external" href="giveaway.html">Giveaway</a></li>
+			
+			<li><a rel="external" href="myaccount.html">My Account</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+	
+	<div id="event_title"></div>
+	<div id="event_body">
+	   <div id="event_photo">
+            <div id="top_left"></div>
+            <div id="top_right">
+                <div class="infoheader">Days Left Until Race</div>
+                <div id="status"></div>
+                <div class="infoheader">Distances</div>
+                <div id="distances"></div>
+            </div>
+       </div>
+       <div class="infoheader1">Description</div>
+       <div id="description"></div>
+       <div class="infoheader1">Registration</div>
+       <div id="registration"></div>
+       <div class="infoheader1">Organized By</div>
+       <div id="organizer"></div>
+       <div class="infoheader1">Contact</div>
+       <div id="contact"></div>
+    </div>
+    
+	
+	<!--<div id="events_list">
+	   <ol id="outside_list">
+       </ol>
+    </div>-->
+    
+<div class="modal"><!-- Place at bottom of page --></div>	
+</body>
+</html>
